@@ -4,14 +4,14 @@ import {useProducts} from '../hooks/useProducts';
 
 const Home = () => {
   
-    const{ products } = useProducts
+    const{ products } = useProducts();
     return (
 
    <>
-      <ItemListContainerComponent/>
+      <ItemListContainerComponent products={products} />
     </>
   )
   
-}
+};
 
-export default Home
+export default Home;
