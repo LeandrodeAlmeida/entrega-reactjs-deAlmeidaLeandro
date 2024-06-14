@@ -23,8 +23,9 @@ a:hover {
 }
 
 body {
-  margin: 0;
+
 background-color: #213547;
+color: white;
 }
 
 h1 {

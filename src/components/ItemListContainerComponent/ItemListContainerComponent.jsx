@@ -1,8 +1,9 @@
 import React from "react";
-import { useProducts } from "../../hooks/useProducts";
 
+import "./ItemListContainerComponent.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 const ItemListContainerComponent = ({ products }) => {
   
@@ -15,7 +16,7 @@ const ItemListContainerComponent = ({ products }) => {
         <Card.Body>
           <Card.Title>{product.title}</Card.Title>
           <Card.Text>{product.description}</Card.Text>
-          <Button variant="primary">Ver detalle</Button>
+          <Link to={`/item/${product.id}`}>Ver detalle</Link>
         </Card.Body>
       </Card>
     );

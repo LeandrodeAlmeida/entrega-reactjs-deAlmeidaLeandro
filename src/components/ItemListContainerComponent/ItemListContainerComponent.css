@@ -1,9 +1,7 @@
 .itemListContainer {
-display:flex;
-color: white;
-font-size: 2rem;
+display: flex;
 margin: auto;
 flex-wrap: wrap;
 height: 80vh;
-
+color: white;
 }
