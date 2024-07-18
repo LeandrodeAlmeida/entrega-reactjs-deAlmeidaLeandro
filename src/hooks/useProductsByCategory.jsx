@@ -1,17 +1,29 @@
 import React from "react";
-import { getProductsByCategory } from "../services/productServices";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 
 export const useProductsByCategory = (category) => {
   const [products, setProducts] = React.useState([]);
 
   React.useEffect(() => {
-    getProductsByCategory(category)
-      .then((res) => {
-        setProducts(res.data.products);
+    const db = getFirestore();
+    const productsCollections = collection(db, "products");
+    const productsQuery = query(
+      productsCollections,
+      where("category", "==", category)
+    );
+    getDocs(productsQuery)
+      .then((snapshot) => {
+        setProducts(
+          snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
       })
-      .catch((error) => {
-        console.error(error);
-      });
+      .catch((error) => console.log(error));
   }, [category]);
 
   return { products };

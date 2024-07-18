@@ -1,16 +1,18 @@
 import React from 'react'
-import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
+
 import { useParams } from 'react-router-dom';
 import { useProductsByCategory } from '../hooks/useProductsByCategory'
-
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
 
 const Category = () => {
   const {id} = useParams();
 
-  const { products } = useProductsByCategory(id);
+  const { product } = useProductsByCategory(id);
   return (
-   <ItemDetailContainer products={products}/>
+   <ItemDetailContainer product={product}/>
   )
 }
 
 export default Category
+
+

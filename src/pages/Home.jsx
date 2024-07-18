@@ -1,14 +1,14 @@
 import React from 'react'
 import ItemListContainerComponent from '../components/ItemListContainerComponent/ItemListContainerComponent';
-import {useProducts} from '../hooks/useProducts';
+import {useCollectionItems} from '../hooks/useCollectionItems';
 
 const Home = () => {
   
-    const{ products } = useProducts();
+    const{ items } = useCollectionItems("products");
     return (
 
    <>
-      <ItemListContainerComponent products={products} />
+      <ItemListContainerComponent products={items} />
     </>
   )
   
