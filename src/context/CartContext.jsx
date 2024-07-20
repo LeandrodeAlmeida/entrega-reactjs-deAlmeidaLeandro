@@ -10,8 +10,9 @@ export const CartProvider = ({ children }) => {
   }
 
   const removeFromCart = () => {
-    setCart(cart -1)
+    setCart(cart > 0 ? cart - 1 : 0); 
   }
+  
   return (
     <CartContext.Provider value={{cart, addToCart, removeFromCart}}>
       {children}

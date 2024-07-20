@@ -1,0 +1,10 @@
+.category-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .category-container h1 {
+    color: white;
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,43 @@
+.item-detail-container {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    color: white;
+  }
+  
+  .item-detail-container h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .item-detail-container p {
+    margin: 10px 0;
+  }
+  
+  .item-detail-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .item-detail-container .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .item-detail-container button {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  .item-detail-container button:hover {
+    border-color: #646cff;
+  }
+  
+  .item-detail-container span {
+    margin: 0 10px;
+  }
